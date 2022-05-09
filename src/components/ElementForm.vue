@@ -63,12 +63,8 @@ export default {
         flex-direction: column;
         justify-content: space-between;
         
-        
     }
-    .block:nth-child(2) .input{
-        height: 108px;
-        resize: none;        
-    }
+    
     .element-form .block h4{
         font-size: 10px;
         font-weight: 600;
@@ -100,5 +96,9 @@ export default {
         line-height: normal;
         letter-spacing: normal;
         color: #b4b4b4;
+    }
+    .block:nth-child(2) .input{
+        height: 108px;
+        resize: none;        
     }
 </style>

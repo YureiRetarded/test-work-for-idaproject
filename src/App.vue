@@ -1,7 +1,10 @@
 <template>
   
   <div class="app">
-    <h1 class="title">Добавление товара</h1>
+    <div class="title-block">
+      <h1 class="title">Добавление товара</h1> 
+      <my-select v-model="selectedSort" :options="sortOptions"></my-select>
+    </div>
     <div class="elements">
       <element-form @create="createItem" />
       <element-list :elements="elements"/>
@@ -32,6 +35,12 @@ export default {
             {id:8,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
             {id:9,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
         ],
+        selectedSort:'',
+        sortOptions:[
+          {value:'element__name',name:"По наименованию"},
+          {value:'price__min',name:"По убыванию цены"},
+          {value:'price__max',name:"По возрастанию цены"},
+        ],
       }
     },
     methods: {
@@ -59,7 +68,11 @@ export default {
   min-height: 345px;
   margin: 0 auto;
   }
-  .app .title{
+  .app .title-block{
+    display: flex;
+    justify-content: space-between;
+  }
+  .app .title-block .title{
     font-size: 28px;
     font-weight: 600;
     font-stretch: normal;
@@ -77,7 +90,7 @@ export default {
       flex-direction: column;
       align-items: center;
     }
-    .app > .title{
+    .app .title-block .title{
       text-align: center;
     }
   }
