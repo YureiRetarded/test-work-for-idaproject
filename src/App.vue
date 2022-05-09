@@ -1,30 +1,65 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  
+  <div class="app">
+    <h1 class="title">Добавление товара</h1>
+    <div class="elements">
+      <element-form @create="createItem" />
+      <element-list :elements="elements"/>
+    </div>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+
+<script>
+import ElementList from '@/components/ElementList'
+import ElementForm from '@/components/ElementForm'
+export default {
+    components:{
+      ElementList,
+      ElementForm
+
+    },
+    data() {
+      return {
+        elements:[
+            {id:1,photo:'https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
+            {id:2,photo:'https://www.planetware.com/wpimages/битая-ссылка/ctures-beautiful-places-to-photogr', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
+            {id:3,photo:'awdawd', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
+            {id:4,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
+            {id:5,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
+            {id:6,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
+            {id:7,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
+            {id:8,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
+            {id:9,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
+        ],
+      }
+    },
+    methods: {
+      createItem(item){
+        this.elements.push(item)
+      }
+
+    },
+}
+</script>
+
+<style lang="scss">
+.app{
+  font-family: 'Open Sans', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  .title{
+    font-size: 28px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-bottom:16px;
+  }
+  .elements{
+    display: flex;
+  }
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
