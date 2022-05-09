@@ -35,11 +35,15 @@ export default {
     }
     @media screen and (max-width:1340px) {
         .list-elements{
-            grid-template: 1fr / repeat(2,1fr); 
+            width: 100%;
+            grid-template: 1fr / repeat(2,1fr);
+            justify-content: center;
+            justify-items: center;
         }
     }
     @media screen and (max-width:1000px) {
         .list-elements{
+            width: 50%;
             grid-template: 1fr / repeat(1,1fr); 
         }
     }

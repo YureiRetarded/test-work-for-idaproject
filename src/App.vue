@@ -56,6 +56,7 @@ export default {
   .app{
   font-family: 'Open Sans', sans-serif;
   max-width: 1440px;
+  min-height: 345px;
   margin: 0 auto;
   }
   .app .title{
@@ -71,9 +72,13 @@ export default {
     display: flex;
     flex-direction: row;
   }
-  @media screen and (max-width:700px) {
+  @media screen and (max-width:660px) {
     .app .elements{
       flex-direction: column;
+      align-items: center;
+    }
+    .app > .title{
+      text-align: center;
     }
   }
 </style>
