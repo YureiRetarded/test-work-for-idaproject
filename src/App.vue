@@ -33,13 +33,13 @@ export default {
             {id:6,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
             {id:7,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
             {id:8,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
-            {id:9,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
+            {id:9,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'100000'},
         ],
         selectedSort:'',
         sortOptions:[
           {value:'element__name',name:"По наименованию"},
-          {value:'price__min',name:"По убыванию цены"},
-          {value:'price__max',name:"По возрастанию цены"},
+          {value:'min',name:"По убыванию цены"},
+          {value:'max',name:"По возрастанию цены"},
         ],
       }
     },
@@ -47,8 +47,15 @@ export default {
       createItem(item){
         this.elements.push(item)
       }
-
     },
+    watch:{
+      selectedSort(newValue){
+          this.elements.sort((element1,element2) => {
+            console.log('qqq')
+            return element1[this.selectedSort]?.localeCompare(element2[this.selectedSort])
+          })
+        }
+    }
 }
 </script>
 
