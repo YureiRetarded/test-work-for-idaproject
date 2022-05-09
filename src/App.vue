@@ -1,7 +1,11 @@
 <template>
-  <div>
-    <element-form @create="createItem" />
-    <element-list :elements="elements"/>
+  
+  <div class="app">
+    <h1 class="title">Добавление товара</h1>
+    <div class="elements">
+      <element-form @create="createItem" />
+      <element-list :elements="elements"/>
+    </div>
   </div>
 </template>
 
@@ -20,7 +24,7 @@ export default {
         elements:[
             {id:1,photo:'https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
             {id:2,photo:'https://www.planetware.com/wpimages/битая-ссылка/ctures-beautiful-places-to-photogr', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
-            {id:3,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
+            {id:3,photo:'awdawd', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
             {id:4,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
             {id:5,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
             {id:6,photo:'', element__name:'Наименование товара', element__description:'Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк', element__price:'10000'},
@@ -39,7 +43,23 @@ export default {
 }
 </script>
 
-
-<style>
+<style lang="scss">
+.app{
+  font-family: 'Open Sans', sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  .title{
+    font-size: 28px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-bottom:16px;
+  }
+  .elements{
+    display: flex;
+  }
+}
 
 </style>

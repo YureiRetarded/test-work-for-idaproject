@@ -1,12 +1,11 @@
 <template >
     <div class="element-item">
         <div class="element-container">
-            <img class="element-photo" :src="element.photo" @load="onImgLoad" @error="onImgLoadError">
+            <img class="element-photo" :src="element.photo" @error="onImgLoadError">
             <div class="element-data">
-                {{element.id}}
-                {{element.element__name}}
-                {{element.element__description}}
-                {{element.element__price}}
+                <span class="title">{{element.element__name}}</span>
+                <span class="description">{{element.element__description}}</span>
+                <span class="price">{{element.element__price}}</span>  
             </div>
         </div>
 
@@ -33,11 +32,8 @@ export default {
         }
     },
     methods: {
-        onImgLoad(){
-            this.isLoaded=true
-        },
-        onImgLoadError(){
-            this.element.photo=altimage
+        onImgLoadError(e){
+            e.target.src=altimage
         }
     },
 
@@ -47,14 +43,57 @@ export default {
 
 <style lang="scss" scoped>
     .element-item{
-        border: 1px solid black;
-        margin: 5px;
-        padding: 5px;
+        margin: 8px;
+        width: 332px;
+        height: 423px;
+        border-radius: 4px;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.02), 0 20px 30px 0 rgba(0, 0, 0, 0.04);
+        background-color: #fffefb;
         .element-container{
+            width: 100%;
+            height: 100%;
             .element-photo{
-                width: 322px;
+                border-radius:4px 4px 0 0;
+                width: 332px;
                 height: 200px;
-                
+            }
+            .element-data{
+                height: 223px;
+                widows: 100%;
+                padding: 16px 16px 24px 16px;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                .title{
+                    font-size: 20px;
+                    font-weight: 600;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #3f3f3f;
+                    margin-bottom: 16px;
+                    justify-self: flex-start;
+                }
+                .description{
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #3f3f3f;
+                }
+                .price{
+                    font-size: 24px;
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: #3f3f3f;
+                    position: absolute;
+                    bottom: 24px;
+                    left: 16px;
+                }
             }
         }
     }
