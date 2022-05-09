@@ -43,12 +43,22 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.app{
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #app {
+    padding: 32px;
+    color: #3f3f3f;
+  }
+  .app{
   font-family: 'Open Sans', sans-serif;
   max-width: 1440px;
   margin: 0 auto;
-  .title{
+  }
+  .app .title{
     font-size: 28px;
     font-weight: 600;
     font-stretch: normal;
@@ -57,9 +67,13 @@ export default {
     letter-spacing: normal;
     margin-bottom:16px;
   }
-  .elements{
+  .app .elements{
     display: flex;
+    flex-direction: row;
   }
-}
-
+  @media screen and (max-width:700px) {
+    .app .elements{
+      flex-direction: column;
+    }
+  }
 </style>

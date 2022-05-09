@@ -41,7 +41,7 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
+<style scoped>
     .element-item{
         margin: 8px;
         width: 332px;
@@ -49,52 +49,53 @@ export default {
         border-radius: 4px;
         box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.02), 0 20px 30px 0 rgba(0, 0, 0, 0.04);
         background-color: #fffefb;
-        .element-container{
-            width: 100%;
-            height: 100%;
-            .element-photo{
-                border-radius:4px 4px 0 0;
-                width: 332px;
-                height: 200px;
-            }
-            .element-data{
-                height: 223px;
-                widows: 100%;
-                padding: 16px 16px 24px 16px;
-                display: flex;
-                flex-direction: column;
-                position: relative;
-                .title{
-                    font-size: 20px;
-                    font-weight: 600;
-                    font-style: normal;
-                    line-height: normal;
-                    letter-spacing: normal;
-                    color: #3f3f3f;
-                    margin-bottom: 16px;
-                    justify-self: flex-start;
-                }
-                .description{
-                    font-size: 16px;
-                    font-weight: normal;
-                    font-style: normal;
-                    line-height: normal;
-                    letter-spacing: normal;
-                    color: #3f3f3f;
-                }
-                .price{
-                    font-size: 24px;
-                    font-weight: 600;
-                    font-stretch: normal;
-                    font-style: normal;
-                    line-height: normal;
-                    letter-spacing: normal;
-                    color: #3f3f3f;
-                    position: absolute;
-                    bottom: 24px;
-                    left: 16px;
-                }
-            }
-        }
+
+    }
+    .element-item .element-container {
+        width: 100%;
+        height: 100%;
+    }
+    .element-item .element-container .element-photo{
+        border-radius:4px 4px 0 0;
+        width: 332px;
+        height: 200px;
+    }
+    .element-item .element-container .element-data{
+        height: 223px;
+        widows: 100%;
+        padding: 16px 16px 24px 16px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .element-item .element-container .element-data .title{
+        font-size: 20px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #3f3f3f;
+        margin-bottom: 16px;
+        justify-self: flex-start;
+    }
+    .element-item .element-container .element-data .description{
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #3f3f3f;
+    }
+    .element-item .element-container .element-data .price{
+        font-size: 24px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #3f3f3f;
+        position: absolute;
+        bottom: 24px;
+        left: 16px;
     }
 </style>
