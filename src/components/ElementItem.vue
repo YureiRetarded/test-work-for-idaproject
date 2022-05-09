@@ -45,7 +45,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
     .element-item{
         border: 1px solid black;
         margin: 5px;
