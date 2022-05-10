@@ -78,14 +78,15 @@ export default {
     color: #3f3f3f;
   }
   .app{
-  font-family: 'Open Sans', sans-serif;
-  max-width: 1440px;
-  min-height: 345px;
-  margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 1440px;
+    min-height: 345px;
+    margin: 0 auto;
   }
   .app .title-block{
     display: flex;
     justify-content: space-between;
+    padding: 0 16px;
   }
   .app .title-block .title{
     font-size: 28px;
@@ -99,6 +100,8 @@ export default {
   .app .elements{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 0 16px;
   }
   @media screen and (max-width:660px) {
     .app .elements{
@@ -107,6 +110,12 @@ export default {
     }
     .app .title-block .title{
       text-align: center;
+    }
+  }
+  @media screen and (max-width:530px) {
+    .title-block{
+      flex-direction: column;
+      align-items: center;
     }
   }
 </style>

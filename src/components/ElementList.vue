@@ -31,7 +31,6 @@ export default {
 
 <style scoped>
     .list-elements{
-        margin: 0 16px;
         display: grid;
         grid-template: 1fr / repeat(3,1fr);
         grid-auto-flow: row;
