@@ -6,9 +6,8 @@
                 <span class="title">{{element.element__name}}</span>
                 <span class="description">{{element.element__description}}</span>
                 <div class="price"><span>{{decoratenumber(element.element__price)}}</span> руб.</div>
-                <div class="delete__button"><my-delete-button @click="$emit('remove',element)">У</my-delete-button> </div>
-                 
             </div>
+             <div class="delete__button"><my-delete-button @click="$emit('remove',element)"></my-delete-button> </div>
         </div>
     </div>
 </template>
@@ -24,7 +23,8 @@ export default {
     data() {
         return {
             isLoaded:false,
-            altimage:altimage
+            altimage:altimage,
+            isActive:false
         }
     },
     methods: {
@@ -32,12 +32,12 @@ export default {
             e.target.src=altimage
         },
         decoratenumber(number){
-            console.log("Функция вызвана")
-            console.log(number);
             let reg = /(\d)(?=(\d\d\d)+([^\d]|$))/g
             let newNubmer = number.replace(reg,'$1 ');
-            console.log(newNubmer);
             return newNubmer
+        },
+        isActiveToogle(){
+            this.isActive = !this.isActive;
         }
     },
 
@@ -56,6 +56,8 @@ export default {
 
     }
     .element-item .element-container {
+        cursor: pointer;
+        position: relative;
         width: 100%;
         height: 100%;
     }
@@ -102,9 +104,16 @@ export default {
         bottom: 24px;
         left: 16px;
     }
-    .element-item .element-container .element-data .delete__button{
+    .element-item .element-container .delete__button{
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -8px;
+        right: -8px;
+        transition: 0.5s;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .element-item .element-container:hover .delete__button{
+        opacity: 1;
+        visibility: visible;
     }
 </style>
