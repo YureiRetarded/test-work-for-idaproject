@@ -67,55 +67,42 @@ export default {
 }
 </script>
 
-<style>
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  #app {
-    padding: 32px;
-    color: #3f3f3f;
-  }
+<style  lang="scss">
   .app{
     font-family: 'Open Sans', sans-serif;
     max-width: 1440px;
     min-height: 345px;
     margin: 0 auto;
-  }
-  .app .title-block{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 16px;
-  }
-  .app .title-block .title{
-    font-size: 28px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    margin-bottom:16px;
-  }
-  .app .elements{
+    .title-block{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 16px;
+      .title{
+        font-size: 28px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        margin-bottom:16px;
+        @media screen and (max-width:660px){
+          text-align: center;
+        }
+      }
+      @media screen and (max-width:530px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .elements{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 16px;
-  }
-  @media screen and (max-width:660px) {
-    .app .elements{
-      flex-direction: column;
-      align-items: center;
-    }
-    .app .title-block .title{
-      text-align: center;
-    }
-  }
-  @media screen and (max-width:530px) {
-    .title-block{
-      flex-direction: column;
-      align-items: center;
+     @media screen and (max-width:660px) {
+        flex-direction: column;
+        align-items: center;
+     }
     }
   }
 </style>
