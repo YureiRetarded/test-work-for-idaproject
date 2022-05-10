@@ -5,7 +5,7 @@
             <div class="element-data">
                 <span class="title">{{element.element__name}}</span>
                 <span class="description">{{element.element__description}}</span>
-                <span class="price">{{element.element__price}}</span>  
+                <div class="price"><span>{{decoratenumber(element.element__price)}}</span> руб.</div>  
             </div>
         </div>
 
@@ -34,6 +34,14 @@ export default {
     methods: {
         onImgLoadError(e){
             e.target.src=altimage
+        },
+        decoratenumber(number){
+            console.log("Функция вызвана")
+            console.log(number);
+            let reg = /(\d)(?=(\d\d\d)+([^\d]|$))/g
+            let newNubmer = number.replace(reg,'$1 ');
+            console.log(newNubmer);
+            return newNubmer
         }
     },
 
