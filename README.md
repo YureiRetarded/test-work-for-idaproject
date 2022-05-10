@@ -1,19 +1,22 @@
 # test-work-for-idaproject
+# Инструкция по установке
+Установите nodejs и npm<br>
+Склонируйте проект<br>
+Ввыполните следующие команды<br>
 
-## Project setup
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
 npm run serve
+npm run build //Если нужна сборка
+```
+# Installation instructions
+Install nodejs and npm<br>
+Clone the project<br>
+Execute a possible command<br>
+
+```
+npm install
+npm run serve
+npm run build //Если нужна сборка
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
