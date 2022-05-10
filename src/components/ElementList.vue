@@ -1,11 +1,15 @@
 <template>
-    <div class="list">
-        <element-item
-            v-for="element in elements"
+    <div class="list-elements" v-if="elements.length>0">
+         <transition-group name="transition-list">
+            <element-item
+                v-for="element in elements"
                 :element="element"
                 :key="element.id"
-        />
+                @remove="$emit('remove',element)"
+            />
+         </transition-group>
     </div>
+    <h2 v-else>Товары отсутствуют</h2>
 </template>
 
 
@@ -25,12 +29,37 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
-    .list{
-        margin: 0 16px;
-        width: auto;
+<style scoped>
+    .list-elements{
         display: grid;
         grid-template: 1fr / repeat(3,1fr);
         grid-auto-flow: row;
+    }
+    @media screen and (max-width:1340px) {
+        .list-elements{
+            flex-grow: 1;
+            grid-template: 1fr / repeat(2,1fr);
+            justify-content: center;
+            justify-items: center;
+        }
+    }
+    @media screen and (max-width:1000px) {
+        .list-elements{
+            grid-template: 1fr / repeat(1,1fr); 
+        }
+    }
+    .transition-list-item {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .transition-list-enter-active, .transition-list-leave-active {
+        transition: all 0.4s;
+    }
+    .transition-list-enter, .transition-list-leave-to{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    .transition-list-move {
+    transition: transform 0.6s;
     }
 </style>

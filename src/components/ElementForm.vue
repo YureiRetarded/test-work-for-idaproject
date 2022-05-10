@@ -51,7 +51,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style>
     .element-form{
         width:322px ;
         height:440px ;
@@ -62,45 +62,43 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        .block{
-            h4{
-            font-size: 10px;
-            font-weight: 600;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: normal;
-            letter-spacing: -0.2px;
-            color: #49485e;
-            margin-bottom: 4px;
-        }
-            .input{
-                border-radius: 4px;
-                box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-                border: none;
-                background-color: #fffefb;
-                width: 100%;
-                height: 36px;
-                padding: 10px 16px 10px 16px;
-                font-size: 12px;
-                color: #3f3f3f;
-                &:focus{
-                    outline: none
-                }
-                &::placeholder{
-                    font-size: 12px;
-                    font-weight: normal;
-                    font-style: normal;
-                    line-height: normal;
-                    letter-spacing: normal;
-                    color: #b4b4b4;
-                }
-            }
-        }
-        .block:nth-child(2){
-            .input{
-                height: 108px;
-                resize: none;
-            }
-        }
+        
+    }
+    
+    .element-form .block h4{
+        font-size: 10px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.2px;
+        color: #49485e;
+        margin-bottom: 4px;
+    }
+    .element-form .block .input{
+        border-radius: 4px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+        border: none;
+        background-color: #fffefb;
+        width: 100%;
+        height: 36px;
+        padding: 10px 16px 10px 16px;
+        font-size: 12px;
+        color: #3f3f3f;
+    }
+    .element-form .block .input:focus{
+        outline: none
+    }
+    .element-form .block .input::placeholder{
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #b4b4b4;
+    }
+    .block:nth-child(2) .input{
+        height: 108px;
+        resize: none;        
     }
 </style>
