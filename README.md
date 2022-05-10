@@ -17,6 +17,6 @@ Execute a possible command<br>
 ```
 npm install
 npm run serve
-npm run build //Если нужна сборка
+npm run build //If you need a build
 ```
 
