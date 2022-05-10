@@ -87,29 +87,15 @@ export default {
                 .title{
                     font-size: 20px;
                     font-weight: 600;
-                    font-style: normal;
-                    line-height: normal;
-                    letter-spacing: normal;
-                    color: #3f3f3f;
                     margin-bottom: 16px;
                     justify-self: flex-start;
                 }
                 .description{
                     font-size: 16px;
-                    font-weight: normal;
-                    font-style: normal;
-                    line-height: normal;
-                    letter-spacing: normal;
-                    color: #3f3f3f;
                 }
                 .price{
                     font-size: 24px;
                     font-weight: 600;
-                    font-stretch: normal;
-                    font-style: normal;
-                    line-height: normal;
-                    letter-spacing: normal;
-                    color: #3f3f3f;
                     position: absolute;
                     bottom: 24px;
                     left: 16px;

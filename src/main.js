@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-//import '@/assest/style.scss'
+import '@/assest/style.scss'
 import components from '@/components/UI'
 const app = createApp(App)
 components.forEach(component=>{

@@ -68,15 +68,6 @@ export default {
 </script>
 
 <style  lang="scss">
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  #app {
-    padding: 32px;
-    color: #3f3f3f;
-  }
   .app{
     font-family: 'Open Sans', sans-serif;
     max-width: 1440px;

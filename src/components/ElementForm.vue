@@ -7,7 +7,6 @@
        <div class="block">
             <h4>Описание товара</h4>
             <textarea  class="input"  v-model="item.element__description" placeholder="Описание товара"></textarea>
-            <!-- <input class="input" v-model="item.element__description" type="textarea" placeholder="Описание товара"> -->
        </div>
        <div class="block">
             <h4>Ссылка на изображение товара</h4>
@@ -66,9 +65,6 @@ export default {
             h4{
                 font-size: 10px;
                 font-weight: 600;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: normal;
                 letter-spacing: -0.2px;
                 color: #49485e;
                 margin-bottom: 4px;
@@ -88,10 +84,6 @@ export default {
                 }
                 &::placeholder{
                     font-size: 12px;
-                    font-weight: normal;
-                    font-style: normal;
-                    line-height: normal;
-                    letter-spacing: normal;
                     color: #b4b4b4;
                 }
             }
