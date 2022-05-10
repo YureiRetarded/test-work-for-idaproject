@@ -67,7 +67,7 @@ export default {
 }
 </script>
 
-<style>
+<style  lang="scss">
   *{
     margin: 0;
     padding: 0;
@@ -82,11 +82,11 @@ export default {
     max-width: 1440px;
     min-height: 345px;
     margin: 0 auto;
-  }
-  .app .title-block{
+    .title-block{
     display: flex;
     justify-content: space-between;
     padding: 0 16px;
+  }
   }
   .app .title-block .title{
     font-size: 28px;
