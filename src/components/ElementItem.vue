@@ -5,17 +5,13 @@
             <div class="element-data">
                 <span class="title">{{element.element__name}}</span>
                 <span class="description">{{element.element__description}}</span>
-                <div class="price"><span>{{decoratenumber(element.element__price)}}</span> руб.</div>  
+                <div class="price"><span>{{decoratenumber(element.element__price)}}</span> руб.</div>
+                <div class="delete__button"><my-delete-button @click="$emit('remove',element)">У</my-delete-button> </div>
+                 
             </div>
         </div>
-
-       
-        
-        
     </div>
 </template>
-
-
 <script>
 import altimage from '@/assest/element-item-alt.png'
 export default {
@@ -105,5 +101,10 @@ export default {
         position: absolute;
         bottom: 24px;
         left: 16px;
+    }
+    .element-item .element-container .element-data .delete__button{
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 </style>

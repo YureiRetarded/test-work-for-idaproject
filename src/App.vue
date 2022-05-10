@@ -7,7 +7,7 @@
     </div>
     <div class="elements">
       <element-form @create="createItem" />
-      <element-list :elements="elements"/>
+      <element-list :elements="elements" @remove="removeElement"/>
     </div>
   </div>
 </template>
@@ -46,6 +46,9 @@ export default {
     methods: {
       createItem(item){
         this.elements.push(item)
+      },
+      removeElement(element){
+        this.elements = this.elements.filter(e=>e.id !== element.id)
       }
     },
     watch:{

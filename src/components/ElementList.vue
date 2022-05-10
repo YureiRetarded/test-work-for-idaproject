@@ -1,11 +1,13 @@
 <template>
-    <div class="list-elements">
+    <div class="list-elements" v-if="elements.length>0">
         <element-item
             v-for="element in elements"
                 :element="element"
                 :key="element.id"
+                @remove="$emit('remove',element)"
         />
     </div>
+    <h2 v-else>Товары отсутствуют</h2>
 </template>
 
 
