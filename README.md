@@ -1,4 +1,4 @@
-# test-work-for-idaproject
+# test-work-for-noname_1
 # Инструкция по установке
 Установите nodejs и npm<br>
 Склонируйте проект<br>
