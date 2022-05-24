@@ -1,11 +1,13 @@
 .DS_Store
 node_modules
+/node_modules
 /dist
 dist
 Maket.fig
 # local env files
 .env.local
 .env.*.local
+Maket.fig
 
 # Log files
 npm-debug.log*
