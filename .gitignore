@@ -3,6 +3,7 @@ node_modules
 /node_modules
 /dist
 dist
+Maket.fig
 # local env files
 .env.local
 .env.*.local
